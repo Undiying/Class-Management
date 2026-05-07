@@ -13,13 +13,13 @@ export function Sidebar({ role = "teacher" }) {
   ]
 
   return (
-    <div className="w-64 glass-panel border-r border-slate-800/50 flex flex-col justify-between h-screen sticky top-0">
+    <div className="w-64 glass-panel border-r border-white/20 flex flex-col justify-between h-screen sticky top-0">
       <div className="p-6">
-        <div className="flex items-center gap-3 mb-10">
-          <div className="w-10 h-10 rounded-xl bg-neon-green/20 border border-neon-green/50 flex items-center justify-center">
-            <div className="w-5 h-5 rounded-md bg-neon-green neon-glow"></div>
+        <div className="flex items-center gap-3 mb-10 group cursor-pointer">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-violet flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div className="w-4 h-4 rounded-full bg-white shadow-inner"></div>
           </div>
-          <h1 className="text-xl font-bold tracking-tight text-white">ClassFlow</h1>
+          <h1 className="text-xl font-bold tracking-tight text-surface-900">ClassFlow</h1>
         </div>
 
         <nav className="space-y-2">
@@ -29,10 +29,10 @@ export function Sidebar({ role = "teacher" }) {
               to={item.href}
               className={({ isActive }) =>
                 cn(
-                  "flex items-center gap-3 px-4 py-3 rounded-2xl transition-all duration-200",
+                  "flex items-center gap-3 px-4 py-3 rounded-2xl transition-all duration-300",
                   isActive
-                    ? "bg-neon-green/10 text-neon-green font-medium"
-                    : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/50"
+                    ? "bg-brand-violet/10 text-brand-violet font-semibold shadow-soft"
+                    : "text-surface-300 hover:text-brand-violet hover:bg-brand-violet/5"
                 )
               }
             >
@@ -44,11 +44,11 @@ export function Sidebar({ role = "teacher" }) {
       </div>
 
       <div className="p-6">
-        <div className="bg-slate-900/50 rounded-2xl p-4 mb-4 border border-slate-800/50">
-          <div className="text-sm font-medium text-slate-200">Sarah Jenkins</div>
-          <div className="text-xs text-slate-500 capitalize">{role}</div>
+        <div className="bg-surface-100/50 rounded-2xl p-4 mb-4 border border-surface-200/50">
+          <div className="text-sm font-semibold text-surface-900">Sarah Jenkins</div>
+          <div className="text-xs text-surface-300 capitalize">{role}</div>
         </div>
-        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-400 hover:text-rose-400 hover:bg-rose-400/10 transition-all duration-200">
+        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-surface-300 hover:text-rose-500 hover:bg-rose-50 transition-all duration-300">
           <LogOut className="w-5 h-5" />
           Sign Out
         </button>

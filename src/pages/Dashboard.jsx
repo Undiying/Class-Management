@@ -7,39 +7,39 @@ export function Dashboard() {
   return (
     <div className="max-w-6xl mx-auto space-y-6">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold text-slate-100">Admin Dashboard</h1>
-        <p className="text-slate-400 mt-2">Manage sessions, classrooms, and teacher accounts.</p>
+        <h1 className="text-3xl font-bold text-surface-900">Admin Dashboard</h1>
+        <p className="text-surface-300 mt-2">Manage sessions, classrooms, and teacher accounts.</p>
       </header>
 
       {/* Stats Row */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <BentoCard className="!p-5 flex-row items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-neon-green/10 flex items-center justify-center text-neon-green">
+        <BentoCard className="!p-5 flex-row items-center gap-4 group">
+          <div className="w-12 h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center text-brand-green group-hover:scale-110 transition-transform duration-300">
             <Users className="w-6 h-6" />
           </div>
           <div>
-            <div className="text-2xl font-bold text-slate-100">142</div>
-            <div className="text-sm text-slate-500">Active Students</div>
+            <div className="text-2xl font-bold text-surface-900">142</div>
+            <div className="text-sm text-surface-300">Active Students</div>
           </div>
         </BentoCard>
         
-        <BentoCard className="!p-5 flex-row items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+        <BentoCard className="!p-5 flex-row items-center gap-4 group">
+          <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:scale-110 transition-transform duration-300">
             <BookOpen className="w-6 h-6" />
           </div>
           <div>
-            <div className="text-2xl font-bold text-slate-100">8</div>
-            <div className="text-sm text-slate-500">Active Classes</div>
+            <div className="text-2xl font-bold text-surface-900">8</div>
+            <div className="text-sm text-surface-300">Active Classes</div>
           </div>
         </BentoCard>
 
-        <BentoCard className="!p-5 flex-row items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400">
+        <BentoCard className="!p-5 flex-row items-center gap-4 group">
+          <div className="w-12 h-12 rounded-2xl bg-brand-violet/10 flex items-center justify-center text-brand-violet group-hover:scale-110 transition-transform duration-300">
             <Clock className="w-6 h-6" />
           </div>
           <div>
-            <div className="text-2xl font-bold text-slate-100">12</div>
-            <div className="text-sm text-slate-500">Sessions Today</div>
+            <div className="text-2xl font-bold text-surface-900">12</div>
+            <div className="text-sm text-surface-300">Sessions Today</div>
           </div>
         </BentoCard>
       </div>
@@ -49,28 +49,28 @@ export function Dashboard() {
         <SessionManager />
       </div>
       
-      {/* Recent Activity or Quick Links could go here */}
-      <BentoCard title="Recent Teacher Activity">
+      {/* Recent Activity */}
+      <BentoCard title="Recent Activity">
         <div className="space-y-4">
-          <div className="flex items-center justify-between p-3 rounded-xl bg-slate-900/50">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-xs">SJ</div>
+          <div className="flex items-center justify-between p-4 rounded-2xl bg-surface-100/50 hover:bg-surface-100 transition-colors duration-300">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-brand-violet/10 text-brand-violet flex items-center justify-center text-xs font-bold">SJ</div>
               <div>
-                <div className="text-sm font-medium text-slate-200">Sarah Jenkins</div>
-                <div className="text-xs text-slate-500">Started 2-hour session</div>
+                <div className="text-sm font-semibold text-surface-900">Sarah Jenkins</div>
+                <div className="text-xs text-surface-300">Started 2-hour session</div>
               </div>
             </div>
-            <div className="text-xs text-slate-500">10 mins ago</div>
+            <div className="text-xs text-surface-300">10 mins ago</div>
           </div>
-          <div className="flex items-center justify-between p-3 rounded-xl bg-slate-900/50">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-xs">MR</div>
+          <div className="flex items-center justify-between p-4 rounded-2xl bg-surface-100/50 hover:bg-surface-100 transition-colors duration-300">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center text-xs font-bold">MR</div>
               <div>
-                <div className="text-sm font-medium text-slate-200">Mike Ross</div>
-                <div className="text-xs text-slate-500">Marked attendance</div>
+                <div className="text-sm font-semibold text-surface-900">Mike Ross</div>
+                <div className="text-xs text-surface-300">Marked attendance</div>
               </div>
             </div>
-            <div className="text-xs text-slate-500">1 hour ago</div>
+            <div className="text-xs text-surface-300">1 hour ago</div>
           </div>
         </div>
       </BentoCard>

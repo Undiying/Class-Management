@@ -1,30 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-50 font-sans antialiased min-h-screen selection:bg-neon-green selection:text-slate-950;
+    @apply bg-surface-50 text-surface-900 font-sans antialiased min-h-screen selection:bg-brand-violet-light selection:text-brand-violet-dark;
   }
+  
   h1, h2, h3, h4, h5, h6 {
-    @apply font-grotesk tracking-tight;
+    @apply font-sans font-semibold tracking-tight;
   }
 }
 
 @layer utilities {
   .glass-panel {
-    @apply bg-slate-900/60 backdrop-blur-md border border-slate-800/50 shadow-xl;
+    @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-premium;
   }
   
   .glass-card {
-    @apply bg-slate-850/50 backdrop-blur-sm border border-slate-800/50 hover:border-slate-700/50 transition-all duration-300;
+    @apply bg-white/40 backdrop-blur-md border border-white/60 hover:bg-white/60 hover:border-brand-violet/20 transition-all duration-500 shadow-soft;
   }
 
-  .text-glow {
-    text-shadow: 0 0 10px rgba(190, 243, 62, 0.5);
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-violet to-brand-green;
   }
   
-  .neon-glow {
-    box-shadow: 0 0 15px rgba(190, 243, 62, 0.2), inset 0 0 10px rgba(190, 243, 62, 0.1);
+  .friendly-gradient {
+    @apply bg-gradient-to-br from-brand-blue/5 via-brand-violet/5 to-brand-green/5;
   }
 }

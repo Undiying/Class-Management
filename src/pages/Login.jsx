@@ -19,54 +19,54 @@ export function Login() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4 friendly-gradient">
       <div className="w-full max-w-md">
-        <div className="flex items-center justify-center gap-3 mb-10">
-          <div className="w-12 h-12 rounded-xl bg-neon-green/20 border border-neon-green/50 flex items-center justify-center">
-            <div className="w-6 h-6 rounded-md bg-neon-green neon-glow"></div>
+        <div className="flex items-center justify-center gap-4 mb-12 group cursor-pointer">
+          <div className="w-14 h-14 rounded-3xl bg-gradient-to-br from-brand-blue to-brand-violet flex items-center justify-center shadow-premium group-hover:scale-105 transition-transform duration-500">
+            <div className="w-5 h-5 rounded-full bg-white shadow-inner"></div>
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-white">ClassFlow</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-surface-900">ClassFlow</h1>
         </div>
 
-        <BentoCard className="!p-8">
-          <h2 className="text-2xl font-bold text-slate-100 mb-2">Welcome Back</h2>
-          <p className="text-slate-400 text-sm mb-8">Sign in to manage your classes and students.</p>
+        <BentoCard className="!p-10 shadow-premium border-white/60">
+          <h2 className="text-2xl font-bold text-surface-900 mb-2">Welcome Back</h2>
+          <p className="text-surface-300 text-sm mb-10">Sign in to manage your classes and students.</p>
           
-          <form onSubmit={handleLogin} className="space-y-5">
+          <form onSubmit={handleLogin} className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+              <label className="block text-sm font-semibold text-surface-900 mb-2 ml-1">Email Address</label>
               <input 
                 type="email" 
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-neon-green focus:ring-1 focus:ring-neon-green transition-all"
+                className="w-full bg-surface-50/50 border border-surface-200 rounded-2xl px-5 py-4 text-surface-900 focus:outline-none focus:border-brand-violet focus:ring-4 focus:ring-brand-violet/10 transition-all duration-300"
                 placeholder="teacher@academy.com"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">Password</label>
+              <label className="block text-sm font-semibold text-surface-900 mb-2 ml-1">Password</label>
               <input 
                 type="password" 
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-neon-green focus:ring-1 focus:ring-neon-green transition-all"
+                className="w-full bg-surface-50/50 border border-surface-200 rounded-2xl px-5 py-4 text-surface-900 focus:outline-none focus:border-brand-violet focus:ring-4 focus:ring-brand-violet/10 transition-all duration-300"
                 placeholder="••••••••"
               />
             </div>
             
             <button 
               type="submit"
-              className="w-full mt-4 flex items-center justify-center gap-2 bg-neon-green text-slate-950 font-bold rounded-xl px-4 py-3 hover:bg-neon-hover transition-colors shadow-[0_0_20px_rgba(190,243,62,0.2)] hover:shadow-[0_0_25px_rgba(190,243,62,0.4)]"
+              className="w-full mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-brand-violet to-brand-blue text-white font-bold rounded-2xl px-5 py-4 hover:shadow-premium hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               <LogIn className="w-5 h-5" />
               Sign In
             </button>
           </form>
           
-          <div className="mt-6 text-center text-sm text-slate-500">
-            Hint: Use "admin@..." for admin view, any other for teacher view.
+          <div className="mt-8 text-center text-xs text-surface-300 bg-surface-50 py-3 rounded-xl border border-surface-200/50">
+            Hint: Use <span className="font-bold text-surface-900">"admin@..."</span> for admin view, any other for teacher view.
           </div>
         </BentoCard>
       </div>

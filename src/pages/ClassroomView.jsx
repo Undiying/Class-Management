@@ -7,15 +7,15 @@ export function ClassroomView() {
     <div className="max-w-6xl mx-auto space-y-6">
       <header className="mb-8 flex items-end justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-slate-100">Room 104</h1>
-          <p className="text-slate-400 mt-2">Current Session: Intro to Robotics</p>
+          <h1 className="text-3xl font-bold text-surface-900">Room 104</h1>
+          <p className="text-surface-300 mt-2">Current Session: Intro to Robotics</p>
         </div>
         <div className="flex gap-3">
-          <button className="flex items-center gap-2 px-4 py-2 bg-neon-green text-slate-950 font-bold rounded-xl hover:bg-neon-hover transition-colors shadow-[0_0_15px_rgba(190,243,62,0.3)]">
+          <button className="flex items-center gap-2 px-6 py-3 bg-brand-green text-white font-bold rounded-2xl hover:shadow-premium hover:scale-105 active:scale-95 transition-all duration-300">
             <Play className="w-4 h-4 fill-current" />
             Start Session
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-slate-800 text-slate-300 font-medium rounded-xl hover:bg-slate-700 hover:text-white transition-colors border border-slate-700">
+          <button className="flex items-center gap-2 px-6 py-3 bg-surface-200 text-surface-900 font-semibold rounded-2xl hover:bg-surface-300 transition-all duration-300">
             <Square className="w-4 h-4 fill-current" />
             End Session
           </button>
@@ -30,28 +30,28 @@ export function ClassroomView() {
         <div className="space-y-6">
           <BentoCard title="Attendance Summary">
             <div className="space-y-4">
-              <div className="flex justify-between items-center p-3 rounded-xl bg-slate-900/50">
-                <span className="text-slate-400">Total Enrolled</span>
-                <span className="text-xl font-bold text-slate-200">24</span>
+              <div className="flex justify-between items-center p-4 rounded-2xl bg-surface-100/50">
+                <span className="text-surface-300 font-medium">Total Enrolled</span>
+                <span className="text-xl font-bold text-surface-900">24</span>
               </div>
-              <div className="flex justify-between items-center p-3 rounded-xl bg-neon-green/10 border border-neon-green/20">
-                <span className="text-neon-green">Present</span>
-                <span className="text-xl font-bold text-neon-green text-glow">18</span>
+              <div className="flex justify-between items-center p-4 rounded-2xl bg-brand-green/10 border border-brand-green/20">
+                <span className="text-brand-green font-semibold">Present</span>
+                <span className="text-xl font-bold text-brand-green">18</span>
               </div>
-              <div className="flex justify-between items-center p-3 rounded-xl bg-rose-500/10 border border-rose-500/20">
-                <span className="text-rose-400">Absent</span>
-                <span className="text-xl font-bold text-rose-400">6</span>
+              <div className="flex justify-between items-center p-4 rounded-2xl bg-rose-50 border border-rose-100">
+                <span className="text-rose-500 font-semibold">Absent</span>
+                <span className="text-xl font-bold text-rose-500">6</span>
               </div>
             </div>
             
-            <button className="w-full mt-6 py-3 rounded-xl bg-slate-800 text-slate-200 font-medium hover:bg-slate-700 transition-colors border border-slate-700">
+            <button className="w-full mt-6 py-4 rounded-2xl bg-surface-900 text-white font-bold hover:shadow-premium transition-all duration-300">
               Submit Final Attendance
             </button>
           </BentoCard>
 
           <BentoCard title="Session Notes">
             <textarea 
-              className="w-full h-32 bg-slate-900/50 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-neon-green/50 focus:ring-1 focus:ring-neon-green/50 resize-none"
+              className="w-full h-32 bg-surface-50/50 border border-surface-200 rounded-2xl p-4 text-sm text-surface-900 placeholder:text-surface-200 focus:outline-none focus:border-brand-violet focus:ring-4 focus:ring-brand-violet/5 resize-none transition-all duration-300"
               placeholder="Add any notes about today's session..."
             ></textarea>
           </BentoCard>

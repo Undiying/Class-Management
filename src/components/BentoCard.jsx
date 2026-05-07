@@ -10,7 +10,7 @@ export function BentoCard({ className, children, title, ...props }) {
       {...props}
     >
       {title && (
-        <h3 className="text-xl font-bold mb-4 text-slate-100">{title}</h3>
+        <h3 className="text-xl font-bold mb-4 text-surface-900">{title}</h3>
       )}
       <div className="flex-1 flex flex-col">
         {children}

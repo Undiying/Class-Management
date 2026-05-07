@@ -18,7 +18,7 @@ function Layout({ children }) {
   const role = isClassroom ? "teacher" : "admin"
 
   return (
-    <div className="flex min-h-screen bg-slate-950">
+    <div className="flex min-h-screen bg-surface-50">
       <Sidebar role={role} />
       <main className="flex-1 p-8 overflow-y-auto">
         {children}
