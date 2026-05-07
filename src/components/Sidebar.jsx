@@ -1,21 +1,33 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { Home, Users, Calendar, LogOut, Settings } from "lucide-react"
 import { cn } from "../lib/utils"
+import { useAuth } from "../lib/AuthContext"
 
-export function Sidebar({ role = "teacher" }) {
-  const isAdmin = role === "admin"
+export function Sidebar() {
+  const { profile, signOut } = useAuth()
+  const navigate = useNavigate()
+  const isAdmin = profile?.role === "admin"
 
   const navItems = [
-    { name: "Dashboard", href: "/", icon: Home },
+    ...(isAdmin ? [{ name: "Dashboard", href: "/", icon: Home }] : []),
     { name: "Classroom", href: "/classroom", icon: Users },
     { name: "Schedule", href: "/schedule", icon: Calendar },
     ...(isAdmin ? [{ name: "Settings", href: "/settings", icon: Settings }] : []),
   ]
 
+  const handleSignOut = async () => {
+    await signOut()
+    navigate("/login")
+  }
+
+  const initials = profile?.full_name
+    ? profile.full_name.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2)
+    : "?"
+
   return (
     <div className="w-64 glass-panel border-r border-sky-100 flex flex-col justify-between h-screen sticky top-0">
       <div className="p-6">
-        <div className="flex items-center gap-3 mb-10 group cursor-pointer">
+        <div className="flex items-center gap-3 mb-10 group cursor-pointer" onClick={() => navigate(isAdmin ? "/" : "/classroom")}>
           <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-violet flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
             <div className="w-4 h-4 rounded-full bg-white shadow-inner"></div>
           </div>
@@ -44,11 +56,21 @@ export function Sidebar({ role = "teacher" }) {
       </div>
 
       <div className="p-6">
-        <div className="bg-sky-100/50 rounded-2xl p-4 mb-4 border border-sky-200/50">
-          <div className="text-sm font-semibold text-surface-900">Sarah Jenkins</div>
-          <div className="text-xs text-surface-300 capitalize">{role}</div>
+        <div className="bg-sky-100/50 rounded-2xl p-4 mb-4 border border-sky-200/50 flex items-center gap-3">
+          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-blue to-brand-violet text-white font-bold text-xs flex items-center justify-center flex-shrink-0">
+            {initials}
+          </div>
+          <div className="min-w-0">
+            <div className="text-sm font-semibold text-surface-900 truncate">
+              {profile?.full_name ?? "Loading..."}
+            </div>
+            <div className="text-xs text-surface-300 capitalize">{profile?.role ?? ""}</div>
+          </div>
         </div>
-        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-surface-300 hover:text-red-600 hover:bg-red-50 transition-all duration-300">
+        <button
+          onClick={handleSignOut}
+          className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-surface-300 hover:text-red-600 hover:bg-red-50 transition-all duration-300"
+        >
           <LogOut className="w-5 h-5" />
           Sign Out
         </button>
