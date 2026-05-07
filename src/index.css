@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-50 font-sans antialiased min-h-screen selection:bg-neon-green selection:text-slate-950;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-grotesk tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-900/60 backdrop-blur-md border border-slate-800/50 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-slate-850/50 backdrop-blur-sm border border-slate-800/50 hover:border-slate-700/50 transition-all duration-300;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(190, 243, 62, 0.5);
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 15px rgba(190, 243, 62, 0.2), inset 0 0 10px rgba(190, 243, 62, 0.1);
+  }
+}
