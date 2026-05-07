@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-surface-50 text-surface-900 font-sans antialiased min-h-screen selection:bg-brand-violet-light selection:text-brand-violet-dark;
+    @apply bg-surface-50 text-surface-900 font-sans antialiased min-h-screen selection:bg-brand-blue/20 selection:text-brand-blue-dark;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -16,11 +16,11 @@
 
 @layer utilities {
   .glass-panel {
-    @apply bg-surface-100/60 backdrop-blur-xl border border-white/5 shadow-premium;
+    @apply bg-white/70 backdrop-blur-xl border border-white/80 shadow-premium;
   }
   
   .glass-card {
-    @apply bg-surface-100/40 backdrop-blur-md border border-white/5 hover:bg-surface-100/60 hover:border-brand-blue/20 transition-all duration-500 shadow-soft;
+    @apply bg-white/50 backdrop-blur-md border border-sky-100 hover:bg-white/80 hover:border-sky-200 transition-all duration-500 shadow-soft;
   }
 
   .gradient-text {
@@ -28,6 +28,6 @@
   }
   
   .friendly-gradient {
-    @apply bg-gradient-to-br from-brand-blue/10 via-brand-violet/5 to-brand-green/5;
+    @apply bg-gradient-to-br from-sky-100 via-violet-50 to-emerald-50;
   }
 }

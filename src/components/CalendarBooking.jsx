@@ -20,7 +20,7 @@ export function CalendarBooking() {
               className={`flex-shrink-0 w-16 h-24 rounded-3xl flex flex-col items-center justify-center transition-all duration-300 border ${
                 isSelected 
                   ? 'bg-brand-violet text-white font-bold shadow-premium border-brand-violet scale-105' 
-                  : 'bg-surface-100/50 text-surface-300 hover:bg-white hover:border-brand-violet/20 border-surface-200'
+                  : 'bg-sky-50 text-surface-300 hover:bg-sky-100 hover:text-brand-blue hover:border-brand-blue/30 border-sky-100'
               }`}
             >
               <span className={`text-[10px] uppercase mb-2 tracking-wider ${isSelected ? 'text-white/80' : 'text-surface-300'}`}>
@@ -35,9 +35,9 @@ export function CalendarBooking() {
       <div className="space-y-3 mt-auto">
         <div className="text-xs font-bold text-surface-300 uppercase tracking-widest mb-4 ml-1">Available Slots</div>
         {['09:00 AM', '11:00 AM', '02:00 PM', '04:00 PM'].map((time, i) => (
-          <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-surface-50/50 border border-surface-200 hover:border-brand-violet/30 hover:bg-white hover:shadow-soft transition-all duration-300 group cursor-pointer">
+          <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-sky-50 border border-sky-100 hover:border-brand-blue/30 hover:bg-blue-50/50 transition-all duration-300 group cursor-pointer">
             <span className="text-surface-900 font-bold">{time}</span>
-            <button className="px-4 py-1.5 rounded-xl bg-brand-violet/10 text-brand-violet text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-brand-violet hover:text-white">
+            <button className="px-4 py-1.5 rounded-xl bg-brand-blue text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-brand-blue-dark">
               Book Now
             </button>
           </div>

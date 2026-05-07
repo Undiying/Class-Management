@@ -13,7 +13,7 @@ export function Sidebar({ role = "teacher" }) {
   ]
 
   return (
-    <div className="w-64 glass-panel border-r border-white/5 flex flex-col justify-between h-screen sticky top-0">
+    <div className="w-64 glass-panel border-r border-sky-100 flex flex-col justify-between h-screen sticky top-0">
       <div className="p-6">
         <div className="flex items-center gap-3 mb-10 group cursor-pointer">
           <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-violet flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
@@ -44,11 +44,11 @@ export function Sidebar({ role = "teacher" }) {
       </div>
 
       <div className="p-6">
-        <div className="bg-surface-100/50 rounded-2xl p-4 mb-4 border border-surface-200/50">
+        <div className="bg-sky-100/50 rounded-2xl p-4 mb-4 border border-sky-200/50">
           <div className="text-sm font-semibold text-surface-900">Sarah Jenkins</div>
           <div className="text-xs text-surface-300 capitalize">{role}</div>
         </div>
-        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-surface-300 hover:text-rose-500 hover:bg-rose-50 transition-all duration-300">
+        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-surface-300 hover:text-red-600 hover:bg-red-50 transition-all duration-300">
           <LogOut className="w-5 h-5" />
           Sign Out
         </button>

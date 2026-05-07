@@ -28,7 +28,7 @@ export function SeatingMap() {
 
   return (
     <BentoCard title="Interactive Seating Map" className="col-span-1 md:col-span-2">
-      <div className="flex-1 flex items-center justify-center bg-surface-50/50 rounded-3xl p-8 border border-surface-200/50">
+      <div className="flex-1 flex items-center justify-center bg-sky-50/80 rounded-3xl p-8 border border-sky-100">
         <div className="grid grid-cols-6 gap-4 md:gap-6">
           {seats.map((seat) => (
             <div
@@ -40,8 +40,8 @@ export function SeatingMap() {
                 className={cn(
                   "w-12 h-12 md:w-16 md:h-16 rounded-2xl transition-all duration-500 flex items-center justify-center border",
                   seat.isOccupied
-                    ? "bg-brand-blue/10 border-brand-blue/30 text-brand-blue shadow-soft"
-                    : "bg-white/40 border-surface-200 text-surface-200 hover:bg-white hover:border-brand-blue/20 hover:shadow-soft"
+                    ? "bg-brand-blue/15 border-brand-blue/40 text-brand-blue shadow-soft"
+                    : "bg-sky-100/50 border-sky-200 text-surface-300 hover:bg-sky-200/50 hover:border-brand-blue/30 hover:shadow-soft"
                 )}
               >
                 <div className={cn(

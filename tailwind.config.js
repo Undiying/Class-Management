@@ -9,27 +9,27 @@ export default {
       colors: {
         brand: {
           green: {
-            light: '#dcfce7',
+            light: '#bbf7d0',
             DEFAULT: '#10b981',
-            dark: '#064e3b',
+            dark: '#065f46',
           },
           violet: {
-            light: '#ede9fe',
-            DEFAULT: '#a78bfa',
+            light: '#ddd6fe',
+            DEFAULT: '#7c3aed',
             dark: '#4c1d95',
           },
           blue: {
-            light: '#e0f2fe',
-            DEFAULT: '#38bdf8',
+            light: '#bae6fd',
+            DEFAULT: '#0284c7',
             dark: '#0c4a6e',
           },
         },
         surface: {
-          50: '#0f172a',    // Deep Blue-Slate
-          100: '#1e293b',   // Mid Blue-Slate
-          200: '#334155',   // Light Blue-Slate
-          300: '#94a3b8',   // Muted Blue-Slate Text
-          900: '#f8fafc',   // Near White Text
+          50: '#e0f2fe',    // Very Light Sky Blue (page background)
+          100: '#bae6fd',   // Light Sky Blue (hover tint)
+          200: '#7dd3fc',   // Medium Sky (borders, dividers)
+          300: '#475569',   // Muted Slate Text
+          900: '#0c1a2e',   // Deep Blue (headings, text)
         }
       },
       fontFamily: {

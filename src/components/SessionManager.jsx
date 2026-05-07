@@ -30,7 +30,7 @@ export function SessionManager() {
         <button 
           onClick={() => handleNotify(1)}
           disabled={loading}
-          className="w-full flex items-center justify-between p-4 rounded-3xl bg-surface-100/50 border border-surface-200 hover:border-brand-blue/30 hover:bg-white hover:shadow-soft transition-all duration-300 group"
+          className="w-full flex items-center justify-between p-4 rounded-3xl bg-sky-50 border border-sky-100 hover:border-brand-blue/40 hover:bg-brand-blue/5 transition-all duration-300 group"
         >
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:scale-110 transition-transform duration-300">
@@ -47,7 +47,7 @@ export function SessionManager() {
         <button 
           onClick={() => handleNotify(2)}
           disabled={loading}
-          className="w-full flex items-center justify-between p-4 rounded-3xl bg-surface-100/50 border border-surface-200 hover:border-brand-green/30 hover:bg-white hover:shadow-soft transition-all duration-300 group"
+          className="w-full flex items-center justify-between p-4 rounded-3xl bg-sky-50 border border-sky-100 hover:border-brand-green/40 hover:bg-brand-green/5 transition-all duration-300 group"
         >
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center text-brand-green group-hover:scale-110 transition-transform duration-300">

@@ -11,11 +11,11 @@ export function ClassroomView() {
           <p className="text-surface-300 mt-2">Current Session: Intro to Robotics</p>
         </div>
         <div className="flex gap-3">
-          <button className="flex items-center gap-2 px-6 py-3 bg-brand-green text-white font-bold rounded-2xl hover:shadow-premium hover:scale-105 active:scale-95 transition-all duration-300">
+          <button className="flex items-center gap-2 px-6 py-3 bg-brand-green text-white font-bold rounded-2xl hover:bg-brand-green-dark hover:shadow-premium active:scale-95 transition-all duration-300">
             <Play className="w-4 h-4 fill-current" />
             Start Session
           </button>
-          <button className="flex items-center gap-2 px-6 py-3 bg-surface-200 text-surface-900 font-semibold rounded-2xl hover:bg-surface-300 transition-all duration-300">
+          <button className="flex items-center gap-2 px-6 py-3 bg-surface-900 text-white font-semibold rounded-2xl hover:bg-surface-900/80 transition-all duration-300">
             <Square className="w-4 h-4 fill-current" />
             End Session
           </button>
@@ -30,21 +30,21 @@ export function ClassroomView() {
         <div className="space-y-6">
           <BentoCard title="Attendance Summary">
             <div className="space-y-4">
-              <div className="flex justify-between items-center p-4 rounded-2xl bg-surface-100/50">
+              <div className="flex justify-between items-center p-4 rounded-2xl bg-sky-50 border border-sky-100">
                 <span className="text-surface-300 font-medium">Total Enrolled</span>
                 <span className="text-xl font-bold text-surface-900">24</span>
               </div>
               <div className="flex justify-between items-center p-4 rounded-2xl bg-brand-green/10 border border-brand-green/20">
-                <span className="text-brand-green font-semibold">Present</span>
+                <span className="text-brand-green-dark font-semibold">Present</span>
                 <span className="text-xl font-bold text-brand-green">18</span>
               </div>
-              <div className="flex justify-between items-center p-4 rounded-2xl bg-rose-50 border border-rose-100">
-                <span className="text-rose-500 font-semibold">Absent</span>
-                <span className="text-xl font-bold text-rose-500">6</span>
+              <div className="flex justify-between items-center p-4 rounded-2xl bg-red-50 border border-red-100">
+                <span className="text-red-600 font-semibold">Absent</span>
+                <span className="text-xl font-bold text-red-600">6</span>
               </div>
             </div>
             
-            <button className="w-full mt-6 py-4 rounded-2xl bg-surface-900 text-white font-bold hover:shadow-premium transition-all duration-300">
+            <button className="w-full mt-6 py-4 rounded-2xl bg-brand-blue text-white font-bold hover:bg-brand-blue-dark hover:shadow-premium transition-all duration-300">
               Submit Final Attendance
             </button>
           </BentoCard>
