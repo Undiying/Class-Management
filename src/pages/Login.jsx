@@ -40,7 +40,7 @@ export function Login() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-surface-50/50 border border-surface-200 rounded-2xl px-5 py-4 text-surface-900 focus:outline-none focus:border-brand-violet focus:ring-4 focus:ring-brand-violet/10 transition-all duration-300"
+                className="w-full bg-surface-50/30 border border-white/10 rounded-2xl px-5 py-4 text-surface-900 placeholder:text-surface-300 focus:outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/10 transition-all duration-300 shadow-inner"
                 placeholder="teacher@academy.com"
               />
             </div>
@@ -51,14 +51,14 @@ export function Login() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-surface-50/50 border border-surface-200 rounded-2xl px-5 py-4 text-surface-900 focus:outline-none focus:border-brand-violet focus:ring-4 focus:ring-brand-violet/10 transition-all duration-300"
+                className="w-full bg-surface-50/30 border border-white/10 rounded-2xl px-5 py-4 text-surface-900 placeholder:text-surface-300 focus:outline-none focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/10 transition-all duration-300 shadow-inner"
                 placeholder="••••••••"
               />
             </div>
             
             <button 
               type="submit"
-              className="w-full mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-brand-violet to-brand-blue text-white font-bold rounded-2xl px-5 py-4 hover:shadow-premium hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              className="w-full mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue to-brand-violet text-white font-bold rounded-2xl px-5 py-4 hover:shadow-premium hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               <LogIn className="w-5 h-5" />
               Sign In

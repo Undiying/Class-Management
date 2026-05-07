@@ -52,25 +52,25 @@ export function Dashboard() {
       {/* Recent Activity */}
       <BentoCard title="Recent Activity">
         <div className="space-y-4">
-          <div className="flex items-center justify-between p-4 rounded-2xl bg-surface-100/50 hover:bg-surface-100 transition-colors duration-300">
+          <div className="flex items-center justify-between p-4 rounded-2xl bg-surface-100/30 hover:bg-surface-100/50 transition-all duration-300 border border-white/5">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-brand-violet/10 text-brand-violet flex items-center justify-center text-xs font-bold">SJ</div>
+              <div className="w-10 h-10 rounded-full bg-brand-violet/20 text-brand-violet-light flex items-center justify-center text-xs font-bold">SJ</div>
               <div>
                 <div className="text-sm font-semibold text-surface-900">Sarah Jenkins</div>
-                <div className="text-xs text-surface-300">Started 2-hour session</div>
+                <div className="text-xs text-surface-300 font-medium">Started 2-hour session</div>
               </div>
             </div>
-            <div className="text-xs text-surface-300">10 mins ago</div>
+            <div className="text-xs text-surface-300 font-medium">10 mins ago</div>
           </div>
-          <div className="flex items-center justify-between p-4 rounded-2xl bg-surface-100/50 hover:bg-surface-100 transition-colors duration-300">
+          <div className="flex items-center justify-between p-4 rounded-2xl bg-surface-100/30 hover:bg-surface-100/50 transition-all duration-300 border border-white/5">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center text-xs font-bold">MR</div>
+              <div className="w-10 h-10 rounded-full bg-brand-green/20 text-brand-green-light flex items-center justify-center text-xs font-bold">MR</div>
               <div>
                 <div className="text-sm font-semibold text-surface-900">Mike Ross</div>
-                <div className="text-xs text-surface-300">Marked attendance</div>
+                <div className="text-xs text-surface-300 font-medium">Marked attendance</div>
               </div>
             </div>
-            <div className="text-xs text-surface-300">1 hour ago</div>
+            <div className="text-xs text-surface-300 font-medium">1 hour ago</div>
           </div>
         </div>
       </BentoCard>

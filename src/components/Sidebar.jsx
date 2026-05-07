@@ -13,7 +13,7 @@ export function Sidebar({ role = "teacher" }) {
   ]
 
   return (
-    <div className="w-64 glass-panel border-r border-white/20 flex flex-col justify-between h-screen sticky top-0">
+    <div className="w-64 glass-panel border-r border-white/5 flex flex-col justify-between h-screen sticky top-0">
       <div className="p-6">
         <div className="flex items-center gap-3 mb-10 group cursor-pointer">
           <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-violet flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">

@@ -16,11 +16,11 @@
 
 @layer utilities {
   .glass-panel {
-    @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-premium;
+    @apply bg-surface-100/60 backdrop-blur-xl border border-white/5 shadow-premium;
   }
   
   .glass-card {
-    @apply bg-white/40 backdrop-blur-md border border-white/60 hover:bg-white/60 hover:border-brand-violet/20 transition-all duration-500 shadow-soft;
+    @apply bg-surface-100/40 backdrop-blur-md border border-white/5 hover:bg-surface-100/60 hover:border-brand-blue/20 transition-all duration-500 shadow-soft;
   }
 
   .gradient-text {
@@ -28,6 +28,6 @@
   }
   
   .friendly-gradient {
-    @apply bg-gradient-to-br from-brand-blue/5 via-brand-violet/5 to-brand-green/5;
+    @apply bg-gradient-to-br from-brand-blue/10 via-brand-violet/5 to-brand-green/5;
   }
 }

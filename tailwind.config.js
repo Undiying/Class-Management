@@ -10,26 +10,26 @@ export default {
         brand: {
           green: {
             light: '#dcfce7',
-            DEFAULT: '#22c55e',
-            dark: '#166534',
+            DEFAULT: '#10b981',
+            dark: '#064e3b',
           },
           violet: {
             light: '#ede9fe',
-            DEFAULT: '#8b5cf6',
-            dark: '#5b21b6',
+            DEFAULT: '#a78bfa',
+            dark: '#4c1d95',
           },
           blue: {
             light: '#e0f2fe',
-            DEFAULT: '#0ea5e9',
-            dark: '#075985',
+            DEFAULT: '#38bdf8',
+            dark: '#0c4a6e',
           },
         },
         surface: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          900: '#0f172a',
+          50: '#0f172a',    // Deep Blue-Slate
+          100: '#1e293b',   // Mid Blue-Slate
+          200: '#334155',   // Light Blue-Slate
+          300: '#94a3b8',   // Muted Blue-Slate Text
+          900: '#f8fafc',   // Near White Text
         }
       },
       fontFamily: {
